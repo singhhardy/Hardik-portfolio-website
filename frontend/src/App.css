@@ -31,6 +31,10 @@ body.dark {
     font-family: 'Poppins', sans-serif !important;
 }
 
+.logo{
+  width: 150px;
+}
+
 
 /* TEXT colors */
 .primary-text{
