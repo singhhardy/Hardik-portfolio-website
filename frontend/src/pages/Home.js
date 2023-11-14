@@ -55,7 +55,7 @@ function Home(){
           <div className='container mt-5 pt-3 mb-2'>
              <div className='row'>
                 <div className='col-lg-7'>
-                    <h1 className='show-text ff-roboto'><span className='cta-text'>MERN</span> STACK DEVELOPER</h1>
+                    <h1 className='show-text '><span className='cta-text'>MERN</span> STACK DEVELOPER</h1>
                     <p className=' fs-5 py-3 fw-bold'>
                         Leveraging the Strength of MERN Stack and for Over 3 Years, Crafting Exceptional Web Solutions with a Proven Track Record of Excellence.</p>
                     <div className='d-flex flex-wrap g-2'>

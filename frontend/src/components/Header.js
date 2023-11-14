@@ -52,7 +52,7 @@ function Header() {
     <>
         {/* <h1 className={`primary-text ff-proto main-text ${isDarkMode ? 'dark' : ''}`} onClick={toggleDarkMode}>Dark Text</h1>
           <p>Hello this is for test</p> */}
-        <div className='main-navbar px-md-4 py-md-2 py-3'>
+        <div className='main-navbar px-md-4 py-md-2 py-0'>
           <div className='d-flex align-items-center justify-content-between'>
 
               <div className='navbar-brand'>
