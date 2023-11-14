@@ -1,4 +1,3 @@
-import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from '../src/components/Header';
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
@@ -9,6 +8,7 @@ import { useEffect, useState } from 'react';
 import Tutorials from './pages/Tutorials';
 import Blogs from './pages/Blogs';
 import Contact from './pages/Contact';
+import './App.css'
 
 function App() {
   const  [isLoading, setIsLoading] = useState(true)
