@@ -13,24 +13,11 @@ import './App.css'
 function App() {
   const  [isLoading, setIsLoading] = useState(true)
 
-
-
   useEffect(() => {
-    window.addEventListener('load', () => {
-      setTimeout(() => {
-        setIsLoading(false);
-        }, 1000);
-      });
-
-    return () => {
-      window.removeEventListener('load', () => {
-        setTimeout(() => {
-          setIsLoading(false);
-        }, 1000);
-      });
-    }
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 1000);
   }, []);
-
 
   return (
     <>
