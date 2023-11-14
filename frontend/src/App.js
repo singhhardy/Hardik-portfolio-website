@@ -2,12 +2,12 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from '../src/components/Header';
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
-import Home from './Pages/Home';
+import Home from './pages/Home';
 import Footer from './components/Footer';
 import Spinner from './components/Spinner';
 import { useEffect, useState } from 'react';
-import Tutorials from './Pages/Tutorials';
-import Blogs from './Pages/Blogs';
+import Tutorials from './pages/Tutorials';
+import Blogs from './pages/Blogs';
 import Contact from './pages/Contact';
 
 function App() {
