@@ -24,7 +24,7 @@ function Contact() {
 
         e.preventDefault();
         
-        const url = 'https://frightened-uniform-worm.cyclic.app//api/send-email';
+        const url = 'https://fair-red-wildebeest-garb.cyclic.app/api/send-email';
 
         fetch(url, {
             method: 'POST',
