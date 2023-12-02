@@ -13,7 +13,7 @@ function PortfolioSlider() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/portfolio', {
+    fetch('https://fair-red-wildebeest-garb.cyclic.app/api/portfolio', {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json'
@@ -69,7 +69,7 @@ function PortfolioSlider() {
                 <div className="card rounded-2 shadow-lg">
                   <img
                     className="img-fluid portfolio-img rounded-2"
-                    src={`http://localhost:5000/${item.img}`}
+                    src={`https://fair-red-wildebeest-garb.cyclic.app/${item.img}`}
                     alt="Portfolio item"
                   />
                 </div>
