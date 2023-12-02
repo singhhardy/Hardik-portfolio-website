@@ -11,7 +11,7 @@ function ProjectPage() {
   
     useEffect(() => {
       // Fetch data when the component mounts
-      fetch(`http://localhost:5000/api/portfolio/${projectId}`, {
+      fetch(`https://fair-red-wildebeest-garb.cyclic.app/api/portfolio/${projectId}`, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
