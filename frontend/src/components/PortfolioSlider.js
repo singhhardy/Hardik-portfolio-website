@@ -7,6 +7,7 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import "swiper/swiper-bundle.css";
 import Spinner from "./Spinner";
+import { Link } from "react-router-dom";
 
 function PortfolioSlider() {
   const [portfolioItems, setPortfolioItems] = useState([]);
@@ -65,7 +66,7 @@ function PortfolioSlider() {
         >
           {portfolioItems.slice(0, 6).map((item) => (
             <SwiperSlide key={item.id}>
-              <a className="portfolio-card py-4 my-4" href="">
+              <Link className="portfolio-card py-4 my-4" to={`/project/:${item.id}`}>
                 <div className="card rounded-2 shadow-lg">
                   <img
                     className="img-fluid portfolio-img rounded-2"
@@ -73,7 +74,7 @@ function PortfolioSlider() {
                     alt="Portfolio item"
                   />
                 </div>
-              </a>
+              </Link>
             </SwiperSlide>
           ))}
         </Swiper>

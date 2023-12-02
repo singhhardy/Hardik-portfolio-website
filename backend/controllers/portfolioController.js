@@ -24,7 +24,7 @@ const uploadPortfolio = async (req, res) => {
 const getPortfolio = async (req, res) => {
 
     try{
-        const portfolioItems = await Portfolio.find();
+        const portfolioItems = await Portfolio.find().maxTimeMS(30000);;
         res.json({success: true, portfolio: portfolioItems})
     } catch(error){
         console.log(error)

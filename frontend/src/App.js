@@ -10,6 +10,7 @@ import Blogs from './pages/Blogs';
 import Contact from './pages/Contact';
 import './App.css';
 import Admin from './pages/Admin';
+import ProjectPage from './pages/ProjectPage';
 
 function App() {
   const  [isLoading, setIsLoading] = useState(true)
@@ -34,6 +35,7 @@ function App() {
               <Route path='/blogs' element={<Blogs />}/>
               <Route path='/contact' element={<Contact />}/>
               <Route path='/Admin' element={<Admin />}/>
+              <Route path='/project/:id' element={<ProjectPage />} />
             </Routes>
           </div>
         </BrowserRouter>
