@@ -10,6 +10,7 @@ import 'swiper/css/scrollbar';
 import 'swiper/swiper-bundle.css';
 
 import BlogSlider from '../components/BlogSlider';
+import ContactForm from '../components/ContactForm';
 
 function Home(){
 
@@ -219,12 +220,20 @@ function Home(){
             </div>
 
             {/* Request Quote */}
-            <div className='tutor-bg mb-5'>
+            <div className='container mb-5'>
                 <div className='container w-md-50 mx-auto text-center py-5'>
-                      <h1 className='fw-bold text-light pt-5'>"Request a Quote"</h1>
-                      <p className='text-light'>Transform your development dreams into tangible realities with a custom quote tailored to meet your visionary requirements for your website project.</p>
-                      <a href='/contact' className='btn cta-outline mb-5 cta-text rounded-1 py-3 px-5 fw-bold'>Contact</a>
-                </div>    
+                      <h1 className='fw-bold py-5'>"Request a Quote"</h1>
+                      <p>Transform your development dreams into tangible realities with a custom quote tailored to meet your visionary requirements for your website project.</p>
+                      {/* <a href='/contact' className='btn cta-outline mb-5 cta-text rounded-1 py-3 px-5 fw-bold'>Contact</a> */}
+                </div>   
+                <div className='row'>
+                        <div className='col-lg-6'>
+                            <img src='homeForm.png' className='img-fluid' alt='contact  Image' />
+                        </div>
+                        <div className='col-lg-6 '>
+                            <ContactForm />
+                        </div>
+                </div> 
             </div>
         </>
     )
