@@ -13,7 +13,7 @@ function PortfolioSlider() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('https://fair-red-wildebeest-garb.cyclic.app/api/portfolio', {
+    fetch('http://localhost:5000/api/portfolio', {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json'
@@ -22,11 +22,11 @@ function PortfolioSlider() {
       .then(response => response.json())
       .then(data => {
         setPortfolioItems(data.portfolio);
-        setLoading(false);
+        setLoading(false); // Set loading to false when data is loaded
       })
       .catch(error => {
         console.error('Error fetching data:', error);
-        setLoading(false);
+        setLoading(false); // Set loading to false in case of an error
       });
   }, []);
 
@@ -69,7 +69,7 @@ function PortfolioSlider() {
                 <div className="card rounded-2 shadow-lg">
                   <img
                     className="img-fluid portfolio-img rounded-2"
-                    src={`https://fair-red-wildebeest-garb.cyclic.app/${item.img}`}
+                    src={`http://localhost:5000/${item.img}`}
                     alt="Portfolio item"
                   />
                 </div>

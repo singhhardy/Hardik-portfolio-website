@@ -76,7 +76,7 @@ function Home(){
             <h1 className='fw-bold fs-2 mt-md-2 mt-5 pt-md-0 mt-5'>Top<span className='cta-text ms-2'>Portfolio</span> Items 
             <i className='fa fa-arrow-right mx-2'></i></h1>
           </div>
-          <div className='my-4 mx-md-0 mx-5 mb-5'>
+          <div className='my-4'>
             <PortfolioSlider />
             </div>
             
