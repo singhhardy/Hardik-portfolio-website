@@ -21,35 +21,27 @@ const uploadPortfolio = async (req, res) => {
 
 // Get all portfolio items
 
-// const getPortfolio = async (req, res) => {
-
-//     try{
-//         const portfolioItems = await Portfolio.find();
-//         res.json({success: true, portfolio: portfolioItems})
-//     } catch(error){
-//         console.log(error)
-//         res.status(500).json({success: false, message: 'Internet Server Error'})
-//     }
-// }
-
 const getPortfolio = async (req, res) => {
-  try {
-    // Check database connection
-    if (mongoose.connection.readyState !== 1) {
-      throw new Error('Database connection not established');
-    }
-    const portfolioItems = await Portfolio.find().limit(6);
 
-    res.json({ success: true, portfolio: portfolioItems });
-  } catch (error) {
-    console.error(error);
-
-    // Improve error handling with more details
-    res.status(500).json({ success: false, message: 'Internal Server Error', error: error.message });
+  const maxRetries = 3;
+  let retries = 0;
+  
+  while (retries < maxRetries) {
+      try {
+          const portfolioItems = await Portfolio.find();
+          res.json({ success: true, portfolio: portfolioItems });
+          break; // Break out of the loop if successful
+      } catch (error) {
+          console.error(error);
+          retries++;
+          // Implement a delay before retrying, if necessary
+      }
   }
-};
-
-
+  
+  if (retries === maxRetries) {
+      res.status(500).json({ success: false, message: 'Failed after multiple retries' });
+  }
+}
 
 module.exports = { 
     uploadPortfolio,
