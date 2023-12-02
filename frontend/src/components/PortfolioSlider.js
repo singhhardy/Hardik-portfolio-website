@@ -13,7 +13,7 @@ function PortfolioSlider() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/portfolio', {
+    fetch('https://fair-red-wildebeest-garb.cyclic.app/api/portfolio', {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json'
