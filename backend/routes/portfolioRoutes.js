@@ -1,5 +1,5 @@
 const express = require('express');
-const { uploadPortfolio, getPortfolio } = require('../controllers/portfolioController');
+const { uploadPortfolio, getPortfolio, getPortfolioItem } = require('../controllers/portfolioController');
 const multer = require('multer');
 const path = require('path');
 const router = express.Router();
@@ -21,5 +21,7 @@ const upload = multer({
 // Assuming 'img' is the name of the file input in the form
 router.post('/upload', upload.single('img'), uploadPortfolio);
 router.get('/', getPortfolio)
+router.get('/:id', getPortfolioItem)
+
 
 module.exports = router;

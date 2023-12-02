@@ -43,7 +43,27 @@ const getPortfolio = async (req, res) => {
   }
 }
 
+// Get Single Portfolio
+
+const getPortfolioItem = async (req, res) => {
+  const { id } = req.params; 
+
+  try {
+    const portfolioItem = await Portfolio.findById(id);
+
+    if (!portfolioItem) {
+      return res.status(404).json({ success: false, message: 'Portfolio item not found' });
+    }
+
+    res.json({ success: true, portfolioItem });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ success: false, message: 'Internal Server Error' });
+  }
+}
+
 module.exports = { 
     uploadPortfolio,
-    getPortfolio
+    getPortfolio,
+    getPortfolioItem
  };

@@ -59,7 +59,7 @@ function Header() {
                 <a href='/' className='brand-logo ff-proto fs-1 dark-text fw-bold  ms-2'>
                   <img
                         src={isDarkMode ? 'logo-light.png' : 'logo-dark.png'}
-                        alt={isDarkMode ? 'Dark Logo' : 'Light Logo'}
+                        alt={isDarkMode ? 'Hardik' : 'Hardik'}
                         className='logo'
                     />
                 </a>
