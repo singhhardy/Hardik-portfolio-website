@@ -66,7 +66,7 @@ function PortfolioSlider() {
         >
           {portfolioItems.slice(0, 6).map((item) => (
             <SwiperSlide key={item.id}>
-              <Link className="portfolio-card py-4 my-4" to={`/project/:${item.id}`}>
+              <Link className="portfolio-card py-4 my-4" to={`/project/:${item._id}`}>
                 <div className="card rounded-2 shadow-lg">
                   <img
                     className="img-fluid portfolio-img rounded-2"
