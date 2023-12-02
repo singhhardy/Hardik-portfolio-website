@@ -4,6 +4,8 @@ const PORT = process.env.PORT || 5000;
 const bodyParser = require('body-parser'); 
 const connectDB = require('./config/db');
 const cors = require('cors')
+const multer = require('multer')
+const path = require('path')
 
 connectDB()
 
@@ -16,6 +18,10 @@ app.use(bodyParser.json())
 app.use(express.json())
 app.use(express.urlencoded({ extended : false }))
 
+
+app.use(express.static(path.join(__dirname, 'public')));
+
+app.use('/api/portfolio', require('./routes/portfolioRoutes'))
 app.use('/api/blogs', require('./routes/blogsroutes'))
 app.use('/api/send-email', require('./routes/emailRoutes'))
 
@@ -23,6 +29,7 @@ app.get('/', (req, res) => {
     res.setHeader("Access-Control-Allow-Credentials", "true")
     res.status(200).json({message: 'Welcome to My Website'})
 })
+
 
 
 app.use('/', (req, res) => {

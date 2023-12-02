@@ -290,6 +290,10 @@ label{
     min-height: 400px;
 }
 
+.portfolio-img{
+    min-height: 300px;
+}
+
 /* MEDIA QUERRIES */
 
 @media(max-width: 960px){

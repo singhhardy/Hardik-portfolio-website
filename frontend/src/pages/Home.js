@@ -11,6 +11,7 @@ import 'swiper/swiper-bundle.css';
 
 import BlogSlider from '../components/BlogSlider';
 import ContactForm from '../components/ContactForm';
+import PortfolioSlider from '../components/PortfolioSlider';
 
 function Home(){
 
@@ -72,64 +73,11 @@ function Home(){
 
           {/* PORTFOLIO */}
           <div className='container'>
-            <h1 className='fw-bold fs-2 mt-md-2 mt-5 pt-md-0 mt-5'>MY Portfolio</h1>
+            <h1 className='fw-bold fs-2 mt-md-2 mt-5 pt-md-0 mt-5'>Top<span className='cta-text ms-2'>Portfolio</span> Items 
+            <i className='fa fa-arrow-right mx-2'></i></h1>
           </div>
           <div className='my-4 mx-md-0 mx-5 mb-5'>
-            <Swiper {...swiperConfig}
-                    loop={true}
-                    autoplay={{
-                        delay: 2500,
-                        // disableOnInteraction: false,
-                      }}
-                    modules={[Autoplay]}
-                    spaceBetween={50}
-                    slidesPerView={1}
-                    // onSlideChange={() => console.log('slide change')}
-                    // onSwiper={(swiper) => console.log(swiper)}
-                    >
-                <SwiperSlide>
-                    <a className='portfolio-card' href=''>
-                    <div className='card rounded-2 shadow-lg'>
-                        <img className='card-img-top rounded-3' src='p1.png' />
-                    </div>
-                    </a>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <a  className='portfolio-card' href=''>
-                    <div className='card rounded-2 shadow-lg'>
-                        <img className='card-img-top rounded-3' src='p2.png' />
-                    </div>
-                    </a>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <a className='portfolio-card' href=''>
-                    <div className='card rounded-2 shadow-lg'>
-                        <img className='card-img-top rounded-3' src='p3.png' />
-                    </div>
-                    </a>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <a className='portfolio-card' href=''>
-                    <div className='card rounded-2 shadow-lg'>
-                        <img className='card-img-top rounded-3' src='p4.png' />
-                    </div>
-                    </a>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <a className='portfolio-card' href=''>
-                    <div className='card rounded-2 shadow-lg'>
-                        <img className='card-img-top rounded-3' src='p5.png' />
-                    </div>
-                    </a>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <a className='portfolio-card' href=''>
-                    <div className='card rounded-2 shadow-lg'>
-                        <img className='card-img-top rounded-3' src='p4.png' />
-                    </div>
-                    </a>
-                </SwiperSlide>
-            </Swiper>   
+            <PortfolioSlider />
             </div>
             
             {/* ABOUT ME */}

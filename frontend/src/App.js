@@ -8,7 +8,8 @@ import { useEffect, useState } from 'react';
 import Tutorials from './pages/Tutorials';
 import Blogs from './pages/Blogs';
 import Contact from './pages/Contact';
-import './App.css'
+import './App.css';
+import Admin from './pages/Admin';
 
 function App() {
   const  [isLoading, setIsLoading] = useState(true)
@@ -32,6 +33,7 @@ function App() {
               <Route path='/tutorials' element={<Tutorials />}/>
               <Route path='/blogs' element={<Blogs />}/>
               <Route path='/contact' element={<Contact />}/>
+              <Route path='/Admin' element={<Admin />}/>
             </Routes>
           </div>
         </BrowserRouter>
