@@ -25,12 +25,6 @@ app.use('/api/portfolio', require('./routes/portfolioRoutes'))
 app.use('/api/blogs', require('./routes/blogsroutes'))
 app.use('/api/send-email', require('./routes/emailRoutes'))
 
-app.get('/', (req, res) => {
-    res.setHeader("Access-Control-Allow-Credentials", "true")
-    res.status(200).json({message: 'Welcome to My Website'})
-})
-
-
 
 app.use('/', (req, res) => {
     res.send('Welcome to my app')

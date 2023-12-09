@@ -35,24 +35,24 @@ function ProjectPage() {
         <div className='container py-5'>
         <div className='row'>
           <div className='col-md-8'>
-            <div className='bg-skeleton showcase'></div>
+            <div className='bg-skeleton showcase rounded-2'></div>
           </div>
           <div className='col-md-4 d-flex align-items-start flex-column justify-content-center'>
-            <h1 className='bg-skeleton'></h1>
+            <h1 className='bg-skeleton rounded-2 py-4'></h1>
             <a
               target='blank'
-              className='btn cta-outline cta-bg w-sm-100 text-light rounded-1 py-3 px-5 fw-bold bg-skeleton'
+              className='btn cta-outline cta-bg w-sm-100 text-light rounded-1 py-3 px-5 fw-bold bg-skeleton rounded-2'
             >
             </a>
           </div>
         </div>
         <div className='py-3'>
           <h1 className='fw-bold bg-skeleton w-50 py-4'></h1>
-          <p className='bg-skeleton'></p>
-          <p className='bg-skeleton'></p>
-          <p className='bg-skeleton'></p>
-          <p className='bg-skeleton'></p>
-          <p className='bg-skeleton w-50'></p>
+          <p className='bg-skeleton rounded-2'></p>
+          <p className='bg-skeleton rounded-2'></p>
+          <p className='bg-skeleton rounded-2'></p>
+          <p className='bg-skeleton rounded-2'></p>
+          <p className='bg-skeleton rounded-2 w-50'></p>
         </div>
       </div>
     ) : (

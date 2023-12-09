@@ -232,8 +232,6 @@ label{
     margin-left: 10%;
 }
 
-
-
 /* CARDS */
 
 .card{
@@ -296,9 +294,9 @@ label{
 
 /* SKELTON ANIMATION */
 
-
 .bg-skeleton {
     width: 100%;
+    opacity: 0.8;
     height: 15px;
     display: block;
     background: linear-gradient(
