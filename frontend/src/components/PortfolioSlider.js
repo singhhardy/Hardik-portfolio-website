@@ -53,8 +53,41 @@ function PortfolioSlider() {
   return (
     <div>
       {loading ? (
-        <Spinner />
-      ) : (
+          <Swiper
+          {...swiperConfig}
+          loop={true}
+          autoplay={{
+            delay: 1500,
+          }}
+          modules={[Autoplay]}
+          spaceBetween={50}
+        >
+            <SwiperSlide>
+              <div className="portfolio-card portfolio-img bg-skeleton rounded-2 py-4 my-4" >
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="portfolio-card portfolio-img bg-skeleton rounded-2 py-4 my-4" >
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="portfolio-card portfolio-img bg-skeleton rounded-2 py-4 my-4" >
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="portfolio-card portfolio-img bg-skeleton rounded-2 py-4 my-4" >
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="portfolio-card portfolio-img bg-skeleton rounded-2 py-4 my-4" >
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="portfolio-card portfolio-img bg-skeleton rounded-2 py-4 my-4" >
+              </div>
+            </SwiperSlide>
+        </Swiper>
+    ) : (
         <Swiper
           {...swiperConfig}
           loop={true}

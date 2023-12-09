@@ -44,7 +44,7 @@ function Home(){
             spaceBetween: 20,
           },
           768: {
-            slidesPerView: 2,
+            slidesPerView: 1,
             spaceBetween: 30,
           },
         },
@@ -135,32 +135,26 @@ function Home(){
                             <div className='rounded-3 p-5 shadow-primary light-bg text-start border m-md-5'>
                                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit quibusdam officia voluptate dignissimos 
                                     numquam aliquid qui ipsum reprehenderit? Excepturi, porro!
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit quibusdam officia voluptate dignissimos 
+                                    numquam aliquid qui ipsum reprehenderit? Excepturi, porro!
                                 </p>
-                                <span className='fw-bold'>Ferry Stienstra.</span>
+                                <div className='text-end'>
+                                    <span className='fw-bold'>Ferry Stienstra.</span>
+                                    <p>CTO. Voiped Telecom</p>
+                                </div>
                             </div>
                         </SwiperSlide>
                         <SwiperSlide>
                             <div className='rounded-3 p-5 text-start  light-bg shadow-primary border m-md-5'>
                                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit quibusdam officia voluptate dignissimos 
                                     numquam aliquid qui ipsum reprehenderit? Excepturi, porro!
-                                </p>
-                                <span className='fw-bold'>Ferry Stienstra.</span>
-                            </div>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <div className='rounded-3 p-5 text-start border  light-bg shadow-primary m-md-5'>
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit quibusdam officia voluptate dignissimos 
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit quibusdam officia voluptate dignissimos 
                                     numquam aliquid qui ipsum reprehenderit? Excepturi, porro!
                                 </p>
-                                <span className='fw-bold'>Ferry Stienstra.</span>
-                            </div>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <div className='rounded-3 p-5 text-start border light-bg shadow-primary m-md-5'>
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit quibusdam officia voluptate dignissimos 
-                                    numquam aliquid qui ipsum reprehenderit? Excepturi, porro!
-                                </p>
-                                <span className='fw-bold'>Ferry Stienstra.</span>
+                                <div className='text-end'>
+                                    <span className='fw-bold'>Jitender Sharma</span>
+                                    <p>Founder - WottaWeb</p>
+                                </div>
                             </div>
                         </SwiperSlide>
                       </Swiper>
