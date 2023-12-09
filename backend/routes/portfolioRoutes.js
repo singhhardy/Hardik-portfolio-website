@@ -11,17 +11,15 @@ const storage = multer.diskStorage({
     filename: function (req, file, cb) {
       return cb(null, `${Date.now()}_${file.originalname}`);
     },
-  });
-  
+});
 
 const upload = multer({
     storage
 });
-  
-// Assuming 'img' is the name of the file input in the form
-router.post('/upload', upload.single('img'), uploadPortfolio);
+
+// Change the order of routes
 router.get('/', getPortfolio)
 router.get('/:id', getPortfolioItem)
-
+router.post('/upload', upload.single('img'), uploadPortfolio);
 
 module.exports = router;
