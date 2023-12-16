@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import {Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay} from 'swiper/modules'
+import { Link } from 'react-router-dom';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -66,12 +67,22 @@ function BlogSlider() {
                 {blogsData.slice(0, 6)
                 .map((blog) => (
                     <SwiperSlide key={blog.id}>
-                    <div className='card shadow-primary portfolio-card mx-3 my-4' >
-                        <img className='card-img-top' src={blog.Img} alt={blog.blogTitle} />
-                        <div className='card-body'>
-                            <a href='' className='text-color fw-bold' >{blog.blogTitle}</a>
-                        </div>
-                    </div>
+                            <div class="component-card" >
+                                <Link to={`/project/${blog._id}`}>
+                                    <div class="component-card_image">
+                                        <div class="component-card_image-inside">
+                                        <img src={blog.Img} alt=""  />
+                                        </div>
+                                    </div>
+                                </Link>
+                              <div class="blog-detail light-bg d-flex align-items-center justify-content-between">
+                                <div class="row">
+                                    <h3>{blog.blogTitle} </h3>
+                                    <label>17-12-2023</label>    
+                                </div>
+                                <Link class="btn cta-outline cta-bg rounded-1 text-nowrap mt-2 text-light px-2 ms-2 py-1"  to=''>View More</Link>
+                              </div>
+                            </div>
                     </SwiperSlide>
                 ))}
             </Swiper>

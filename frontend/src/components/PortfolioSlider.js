@@ -47,7 +47,7 @@ function PortfolioSlider() {
         spaceBetween: 50,
       },
     },
-    speed: 1000,
+    speed: 2000,
   };
 
   return (
@@ -92,22 +92,28 @@ function PortfolioSlider() {
           {...swiperConfig}
           loop={true}
           autoplay={{
-            delay: 1500,
+            delay: 2000,
           }}
           modules={[Autoplay]}
           spaceBetween={50}
         >
           {portfolioItems.slice(0, 6).map((item) => (
             <SwiperSlide key={item.id}>
-              <Link className="portfolio-card py-4 my-4" to={`/project/${item._id}`}>
-                <div className="card rounded-2 shadow-lg">
-                  <img
-                    className="img-fluid portfolio-img rounded-2"
-                    src={`https://fair-red-wildebeest-garb.cyclic.app/${item.img}`}
-                    alt="Portfolio item"
-                  />
+                <div class="component-card" >
+                  <Link to={`/project/${item._id}`}>
+                  <div class="component-card_image">
+                    <div class="component-card_image-inside">
+                      <img src={`https://fair-red-wildebeest-garb.cyclic.app/${item.img}`} alt=""  />
+                    </div>
+                  </div>
+                  </Link>
+                  <div class="blog-detail light-bg d-flex align-items-start justify-content-between">
+                    <div class="row">
+                        <h3>{item.title} </h3>
+                    </div>
+                    <Link class="btn cta-outline cta-bg rounded-1 text-nowrap mt-2 text-light px-2 ms-2 py-1"  to={`/project/${item._id}`}>View More</Link>
+                  </div>
                 </div>
-              </Link>
             </SwiperSlide>
           ))}
         </Swiper>

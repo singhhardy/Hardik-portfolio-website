@@ -76,7 +76,7 @@ body.dark {
     background-color: var(--cta-color) !important;
 }
 .light-bg{
-    background: var(--background-color);
+    background: var(--background-color) !important;
 }
 
 
@@ -317,7 +317,78 @@ label{
       background-position: 200% 0, 0 0;
     }
   }
+
+/* Blogs Card Design */
   
+/*NEW BLOG CARDS*/
+
+.component-card{
+    max-height: 90%;
+}    
+    
+.component-card:hover img, .component-card:focus img {
+	 transform: scale(1.1);
+}
+ .component-card_image {
+	 background: #fff;
+	 height: 0;
+	 overflow: hidden;
+	 padding-bottom: 56.2%;
+	 position: relative;
+}
+ .component-card_image-inside {
+	 height: 100%;
+	 left: 0;
+	 position: absolute;
+	 top: 0;
+	 width: 100%;
+}
+ .component-card_image-inside img {
+	 background-size: cover;
+	 height: auto !important;
+	 transform: scale(1);
+	 transition: all 0.25s ease-in-out;
+	 width: 100%;
+	 cursor: pointer;
+}
+ .component-card .blog-detail {
+	 background: var(--light);
+	 margin: 10px 20px 0;
+	 padding: 20px;
+	 position: relative;
+	 top: -80px;
+	 box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.3);
+}
+ .component-card .blog-detail h3 {
+	 font-size: 16px;
+	 margin: 0;
+	 text-transform: uppercase;
+}
+ .component-card .blog-detail label {
+	 color: #737373;
+	 font-size: 14px;
+}
+ .component-card .blog-detail p {
+	 margin-bottom: 1rem;
+	 margin-top: 0;
+}
+
+    .blog-btn{
+        font-size: 12px;
+        background: var(--primary);
+        border: 1px solid var(--primary);
+    }
+
+    .blog-btn:hover{
+        background: var(--light);
+        border: 1px solid var(--primary);
+        color: var(--primary);
+    }
+
+/* NEW BLOG ENDS HERE */
+
+
+  /* Blogs cards ends here */
 
 /* MEDIA QUERRIES */
 
