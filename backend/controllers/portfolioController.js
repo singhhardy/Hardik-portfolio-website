@@ -30,11 +30,10 @@ const getPortfolio = async (req, res) => {
       try {
           const portfolioItems = await Portfolio.find();
           res.json({ success: true, portfolio: portfolioItems });
-          break; // Break out of the loop if successful
+          break;
       } catch (error) {
           console.error(error);
           retries++;
-          // Implement a delay before retrying, if necessary
       }
   }
   

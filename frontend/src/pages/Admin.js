@@ -33,7 +33,7 @@ const Admin = () => {
     formData.append("url", portfolioData.url);
     formData.append("img", portfolioData.img);
 
-    const url = "https://fair-red-wildebeest-garb.cyclic.app/api/portfolio/upload";
+    const url = "http://localhost:5000/api/portfolio/upload";
 
     fetch(url, {
       method: "POST",
@@ -69,7 +69,7 @@ const Admin = () => {
            </h2>
         </div>
 
-        <div className="col-md-6 s">
+        <div className="col-md-6">
         <form onSubmit={handleSubmit}>
           <div className="row">
             <label className="mt-2  fw-bold">Title:</label>

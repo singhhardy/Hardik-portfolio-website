@@ -17,7 +17,6 @@ const upload = multer({
     storage
 });
 
-// Change the order of routes
 router.get('/', getPortfolio)
 router.get('/:id', getPortfolioItem)
 router.post('/upload', upload.single('img'), uploadPortfolio);
