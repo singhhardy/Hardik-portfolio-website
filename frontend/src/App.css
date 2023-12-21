@@ -345,12 +345,11 @@ label{
 }
  .component-card_image-inside img {
 	 background-size: cover;
-	 height: auto !important;
 	 transform: scale(1);
 	 transition: all 0.25s ease-in-out;
 	 width: 100%;
 	 cursor: pointer;
-	 height: 100%;
+	 height: 100% !important;
 }
  .component-card .blog-detail {
 	 background: var(--light);
