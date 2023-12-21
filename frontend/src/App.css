@@ -350,6 +350,7 @@ label{
 	 transition: all 0.25s ease-in-out;
 	 width: 100%;
 	 cursor: pointer;
+	 height: 100%;
 }
  .component-card .blog-detail {
 	 background: var(--light);
