@@ -14,22 +14,33 @@ function PortfolioSlider() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('https://fair-red-wildebeest-garb.cyclic.app/api/portfolio', {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-    })
-      .then(response => response.json())
-      .then(data => {
-        setPortfolioItems(data.portfolio);
-        setLoading(false); // Set loading to false when data is loaded
-      })
-      .catch(error => {
+    const fetchData = async () => {
+      try {
+        const cachedData = localStorage.getItem("portfolioData");
+        if (cachedData) {
+          setPortfolioItems(JSON.parse(cachedData));
+          setLoading(false);
+        } else {
+          const response = await fetch('https://fair-red-wildebeest-garb.cyclic.app/api/portfolio', {
+            method: 'GET',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+          });
+          const data = await response.json();
+          setPortfolioItems(data.portfolio);
+          setLoading(false);
+          localStorage.setItem("portfolioData", JSON.stringify(data.portfolio));
+        }
+      } catch (error) {
         console.error('Error fetching data:', error);
-        setLoading(false); // Set loading to false in case of an error
-      });
+        setLoading(false);
+      }
+    };
+
+    fetchData();
   }, []);
+
 
   const swiperConfig = {
     spaceBetween: 20,
