@@ -18,7 +18,7 @@ function ProjectPage() {
           setLoading(false);
         } else {
           // Fetch project data from the API
-          const response = await fetch(`https://hardik-portfolio-website.vercel.app//api/portfolio/${projectId}`, {
+          const response = await fetch(`https://hardik-portfolio-website.vercel.app/api/portfolio/${projectId}`, {
             method: 'GET',
             headers: {
               'Content-Type': 'application/json',
@@ -72,7 +72,7 @@ function ProjectPage() {
           <div className='row'>
             <div className='col-md-8'>
               <img
-                src={`https://hardik-portfolio-website.vercel.app//${projectData.img}`}
+                src={`https://hardik-portfolio-website.vercel.app/${projectData.img}`}
                 className='img-fluid rounded-2'
                 alt='Project View'
               />
