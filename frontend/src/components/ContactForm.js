@@ -25,7 +25,7 @@ function ContactForm() {
 
         e.preventDefault();
         
-        const url = 'http://localhost:5000/api/send-email';
+        const url = 'https://hardik-portfolio-website.vercel.app//api/send-email';
 
         fetch(url, {
             method: 'POST',

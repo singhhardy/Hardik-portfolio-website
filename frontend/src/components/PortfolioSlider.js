@@ -21,7 +21,7 @@ function PortfolioSlider() {
           setPortfolioItems(JSON.parse(cachedData));
           setLoading(false);
         } else {
-          const response = await fetch('http://localhost:5000/api/portfolio', {
+          const response = await fetch('https://hardik-portfolio-website.vercel.app//api/portfolio', {
             method: 'GET',
             headers: {
               'Content-Type': 'application/json'
@@ -114,7 +114,7 @@ function PortfolioSlider() {
                   <Link to={`/project/${item._id}`}>
                   <div class="component-card_image">
                     <div class="component-card_image-inside">
-                      <img src={`http://localhost:5000/${item.img}`} alt=""  />
+                      <img src={`https://hardik-portfolio-website.vercel.app//${item.img}`} alt=""  />
                     </div>
                   </div>
                   </Link>
