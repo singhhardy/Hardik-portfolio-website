@@ -18,7 +18,7 @@ function ProjectPage() {
           setLoading(false);
         } else {
           // Fetch project data from the API
-          const response = await fetch(`https://fair-red-wildebeest-garb.cyclic.app/api/portfolio/${projectId}`, {
+          const response = await fetch(`http://localhost:5000/api/portfolio/${projectId}`, {
             method: 'GET',
             headers: {
               'Content-Type': 'application/json',
@@ -72,7 +72,7 @@ function ProjectPage() {
           <div className='row'>
             <div className='col-md-8'>
               <img
-                src={`https://fair-red-wildebeest-garb.cyclic.app/${projectData.img}`}
+                src={`http://localhost:5000/${projectData.img}`}
                 className='img-fluid rounded-2'
                 alt='Project View'
               />
