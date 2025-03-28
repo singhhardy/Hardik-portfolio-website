@@ -25,7 +25,7 @@ function ContactForm() {
 
         e.preventDefault();
         
-        const url = 'https://fair-red-wildebeest-garb.cyclic.app/api/send-email';
+        const url = 'http://localhost:5000/api/send-email';
 
         fetch(url, {
             method: 'POST',

@@ -21,7 +21,7 @@ function PortfolioSlider() {
           setPortfolioItems(JSON.parse(cachedData));
           setLoading(false);
         } else {
-          const response = await fetch('https://fair-red-wildebeest-garb.cyclic.app/api/portfolio', {
+          const response = await fetch('http://localhost:5000/api/portfolio', {
             method: 'GET',
             headers: {
               'Content-Type': 'application/json'
@@ -114,7 +114,7 @@ function PortfolioSlider() {
                   <Link to={`/project/${item._id}`}>
                   <div class="component-card_image">
                     <div class="component-card_image-inside">
-                      <img src={`https://fair-red-wildebeest-garb.cyclic.app/${item.img}`} alt=""  />
+                      <img src={`http://localhost:5000/${item.img}`} alt=""  />
                     </div>
                   </div>
                   </Link>
