@@ -13,7 +13,15 @@ const app = express()
 
 app.use(express.static(path.join(__dirname, '../frontend/build')));
 
-app.use(cors())
+const corsOptions = {
+    origin: ['https://portfolio-frontend-m0ym3dop2-hardiks-projects-e39e3263.vercel.app'],  // Frontend URL
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
+    credentials: true,
+    optionsSuccessStatus: 200
+  };
+app.use(cors(corsOptions));
+  
 
 app.use(bodyParser.json())
 
