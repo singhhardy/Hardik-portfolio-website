@@ -21,7 +21,7 @@ function PortfolioSlider() {
           setPortfolioItems(JSON.parse(cachedData));
           setLoading(false);
         } else {
-          const response = await fetch('api/portfolio', {
+          const response = await fetch('https://hardik-portfolio-website.vercel.app/api/portfolio', {
             method: 'GET',
             headers: {
               'Content-Type': 'application/json'
