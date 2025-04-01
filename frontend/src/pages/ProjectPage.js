@@ -11,36 +11,24 @@ function ProjectPage() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        // Check if project data is available in local storage
-        const cachedProjectData = localStorage.getItem(`projectData_${projectId}`);
-        if (cachedProjectData) {
-          setProjectData(JSON.parse(cachedProjectData));
-          setLoading(false);
-        } else {
-          // Fetch project data from the API
-          const response = await fetch(`https://hardik-portfolio-website.vercel.app/api/portfolio/${projectId}`, {
-            method: 'GET',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-          });
-          const data = await response.json();
-          setProjectData(data.portfolioItem);
-          setLoading(false);
-
-          // Cache project data in local storage for future use
-          localStorage.setItem(`projectData_${projectId}`, JSON.stringify(data.portfolioItem));
-        }
+        const response = await fetch(`https://hardik-portfolio-website.vercel.app/api/portfolio/${projectId}`, {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        });
+        const data = await response.json();
+        setProjectData(data.portfolioItem);
+        setLoading(false);
       } catch (error) {
         console.error('Error fetching project data:', error);
         setLoading(false);
       }
     };
-
+  
     fetchData();
   }, [projectId]);
-
-
+  
   return (
     <>
       {loading ? (
